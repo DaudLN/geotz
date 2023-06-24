@@ -1,0 +1,58 @@
+[
+  { "id": 1, "name": "Arusha", "slug": "arusha", "post_code": 1865 },
+  {
+    "id": 2,
+    "name": "Dar es Salaam",
+    "slug": "dar-es-salaam",
+    "post_code": 565
+  },
+  { "id": 3, "name": "Dodoma", "slug": "dodoma", "post_code": 3923 },
+  { "id": 4, "name": "Geita", "slug": "geita", "post_code": 2581 },
+  { "id": 5, "name": "Iringa", "slug": "iringa", "post_code": 2289 },
+  { "id": 6, "name": "Kagera", "slug": "kagera", "post_code": 4043 },
+  {
+    "id": 7,
+    "name": "Kaskazini Pemba",
+    "slug": "kaskazini-pemba",
+    "post_code": 62
+  },
+  {
+    "id": 8,
+    "name": "Kaskazini Unguja",
+    "slug": "kaskazini-unguja",
+    "post_code": 62
+  },
+  { "id": 9, "name": "Katavi", "slug": "katavi", "post_code": 1028 },
+  { "id": 10, "name": "Kigoma", "slug": "kigoma", "post_code": 1862 },
+  { "id": 11, "name": "Kilimanjaro", "slug": "kilimanjaro", "post_code": 2660 },
+  { "id": 12, "name": "Kusini Pemba", "slug": "kusini-pemba", "post_code": 62 },
+  {
+    "id": 13,
+    "name": "Kusini Unguja",
+    "slug": "kusini-unguja",
+    "post_code": 61
+  },
+  { "id": 14, "name": "Lindi", "slug": "lindi", "post_code": 2870 },
+  { "id": 15, "name": "Manyara", "slug": "manyara", "post_code": 2302 },
+  { "id": 16, "name": "Mara", "slug": "mara", "post_code": 3122 },
+  { "id": 17, "name": "Mbeya", "slug": "mbeya", "post_code": 3400 },
+  {
+    "id": 18,
+    "name": "Mjini Magharibi",
+    "slug": "mjini-magharibi",
+    "post_code": 84
+  },
+  { "id": 19, "name": "Morogoro", "slug": "morogoro", "post_code": 4122 },
+  { "id": 20, "name": "Mtwara", "slug": "mtwara", "post_code": 3941 },
+  { "id": 21, "name": "Mwanza", "slug": "mwanza", "post_code": 4067 },
+  { "id": 22, "name": "Njombe", "slug": "njombe", "post_code": 2164 },
+  { "id": 23, "name": "Pwani", "slug": "pwani", "post_code": 1914 },
+  { "id": 24, "name": "Rukwa", "slug": "rukwa", "post_code": 2186 },
+  { "id": 25, "name": "Ruvuma", "slug": "ruvuma", "post_code": 4126 },
+  { "id": 26, "name": "Shinyanga", "slug": "shinyanga", "post_code": 3017 },
+  { "id": 27, "name": "Simiyu", "slug": "simiyu", "post_code": 2970 },
+  { "id": 28, "name": "Singida", "slug": "singida", "post_code": 2602 },
+  { "id": 29, "name": "Songwe", "slug": "songwe", "post_code": 1715 },
+  { "id": 30, "name": "Tabora", "slug": "tabora", "post_code": 4231 },
+  { "id": 31, "name": "Tanga", "slug": "tanga", "post_code": 5249 }
+]
