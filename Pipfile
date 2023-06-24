@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 djangorestframework = "*"
 django = "*"
+django-debug-toolbar = "*"
+drf-nested-routers = "*"
 
 [dev-packages]
 
