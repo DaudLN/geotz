@@ -8,6 +8,7 @@ djangorestframework = "*"
 django = "*"
 django-debug-toolbar = "*"
 drf-nested-routers = "*"
+gunicorn = "==21.2.0"
 
 [dev-packages]
 
