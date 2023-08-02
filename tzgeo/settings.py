@@ -103,8 +103,6 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
-STATIC_URL = "static/"
-
 STATIC_ROOT = BASE_DIR / "staticfile"
 
 STATICFILES_DIRS = [BASE_DIR / "static"]
@@ -118,3 +116,10 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
+
+REST_FRAMEWORK = {
+    "DEFAULT_RENDERER_CLASSES": [
+        "rest_framework.renderers.JSONRenderer",
+        # Add any other renderers you want to use
+    ],
+}
