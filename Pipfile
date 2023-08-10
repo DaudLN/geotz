@@ -9,8 +9,13 @@ django = "*"
 django-debug-toolbar = "*"
 drf-nested-routers = "*"
 gunicorn = "==21.2.0"
+psycopg = "==3.1.9"
+strawberry-graphql-django = "==0.16.0"
 
 [dev-packages]
+pytest = "*"
+requests = "*"
+pytest-django = "*"
 
 [requires]
 python_version = "3.11"

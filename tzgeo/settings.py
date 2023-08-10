@@ -1,4 +1,5 @@
 from pathlib import Path
+from django.core.management.utils import get_random_secret_key
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -8,7 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-5vtc3&rxl3!t=_ig5@z-*h0mfj+csm#cn2ffr29j6j**z=-p5q"
+SECRET_KEY = get_random_secret_key()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -25,6 +26,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "strawberry",
     "debug_toolbar",
     "rest_framework",
     "geodata",
@@ -60,7 +62,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "tzgeo.wsgi.application"
-
 
 DATABASES = {
     "default": {
@@ -120,6 +121,5 @@ INTERNAL_IPS = [
 REST_FRAMEWORK = {
     "DEFAULT_RENDERER_CLASSES": [
         "rest_framework.renderers.JSONRenderer",
-        # Add any other renderers you want to use
     ],
 }

@@ -1,0 +1,13 @@
+type Book {
+  id: number
+}
+
+query {
+  book(id: 1) {
+    book_id
+    book_name
+    book_author
+    book_publisher
+    book_year
+  }
+}

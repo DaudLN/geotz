@@ -12,7 +12,7 @@ class Region(models.Model):
     class Meta:
         ordering = ["name"]
 
-    def __str__(self) -> str:
+    def __str__(self):
         return self.name
 
     def save(self, *args, **kwargs):
@@ -39,7 +39,7 @@ class District(models.Model):
             self.slug = slugify(self.name)
             super().save(*args, **kwargs)
 
-    def __str__(self) -> str:
+    def __str__(self):
         return self.name
 
 
@@ -59,5 +59,5 @@ class Ward(models.Model):
             self.slug = slugify(self.name)
             super().save(*args, **kwargs)
 
-    def __str__(self) -> str:
+    def __str__(self):
         return self.name
