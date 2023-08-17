@@ -3,7 +3,7 @@ from rest_framework_nested import routers
 from strawberry.django.views import GraphQLView
 from . import views
 from django.views.decorators.csrf import csrf_exempt
-from .schema import schema
+from tzgeo.schema import schema
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register("regions", views.RegionViewSet, basename="regions")

@@ -3,10 +3,11 @@ from strawberry.types import Info
 from .types import RegionInputType, RegionType
 from .models import Region
 from typing import List
+from django.contrib.auth.decorators import login_required, permission_required
 
 
 @strawberry.type
-class Query:
+class GeoQuery:
     @strawberry.field
     def get_all_regions(self, info: Info) -> List[RegionType]:
         return Region.objects.all()
@@ -21,12 +22,9 @@ class Query:
 
 
 @strawberry.type
-class Mutation:
+class GeoMutation:
     @strawberry.field
     def create_region(self, input: RegionInputType, info: Info) -> RegionType:
         name = input.name
         post_code = input.post_code
         return Region.objects.create(name=name, post_code=post_code)
-
-
-schema = strawberry.Schema(query=Query, mutation=Mutation)
