@@ -8,9 +8,9 @@ class BaseQuery(GeoQuery, AuthQuery):
     ...
 
 
-@strawberry.type
-class BaseMutation(GeoMutation, AuthMutation):
-    ...
+# @strawberry.type
+# class BaseMutation(AuthMutation):
+#     ...
 
 
-schema = strawberry.Schema(query=BaseQuery, mutation=BaseMutation)
+schema = strawberry.Schema(query=BaseQuery)

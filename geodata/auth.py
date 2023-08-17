@@ -1,7 +1,6 @@
 import strawberry
 from gqlauth.user import arg_mutations as authmutations
 from gqlauth.user.queries import UserQueries
-from gqlauth.captcha.models import Captcha
 
 
 @strawberry.type

@@ -137,12 +137,3 @@ GQL_AUTH = GqlAuthSettings(
     LOGIN_REQUIRE_CAPTCHA=False,
     REGISTER_REQUIRE_CAPTCHA=False,
 )
-
-
-DEFAULT_FROM_EMAIL = "admin.geotz@storefront.com"
-
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-
-EMAIL_HOST = "localhost"
-
-EMAIL_PORT = 2525
