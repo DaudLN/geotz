@@ -14,6 +14,7 @@ strawberry-graphql-django = "==0.16.0"
 strawberry-django-auth = "==0.376.2"
 pillow = "==10.0.0"
 django-graphql-auth = "*"
+whitenoise = "==6.5.0"
 
 [dev-packages]
 pytest = "*"
