@@ -9,9 +9,6 @@ class Region(models.Model):
     slug = models.SlugField(max_length=200, blank=True)
     post_code = models.IntegerField(verbose_name=_("Postal code"))
 
-    class Meta:
-        ordering = ["name"]
-
     def __str__(self):
         return self.name
 
@@ -31,9 +28,6 @@ class District(models.Model):
         to=Region, on_delete=models.CASCADE, related_name="districts"
     )
 
-    class Meta:
-        ordering = ["name"]
-
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.name)
@@ -50,9 +44,6 @@ class Ward(models.Model):
         to=District, on_delete=models.PROTECT, related_name="wards"
     )
     post_code = models.IntegerField(verbose_name=_("Postal code"))
-
-    class Meta:
-        ordering = ["name"]
 
     def save(self, *args, **kwargs):
         if not self.slug:
