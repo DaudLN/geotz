@@ -6,6 +6,7 @@ from rest_framework import permissions
 
 
 class RegionViewSet(ModelViewSet):
+    lookup_field = "slug"
     def get_permissions(self):
         if self.request.method in permissions.SAFE_METHODS:
             return [permissions.AllowAny()]
@@ -20,6 +21,7 @@ class RegionViewSet(ModelViewSet):
 
 class DistrictViewSet(ModelViewSet):
     serializer_class = DistrictSerializer
+    lookup_field = "slug"
 
     def get_permissions(self):
         if self.request.method in permissions.SAFE_METHODS:
@@ -28,14 +30,14 @@ class DistrictViewSet(ModelViewSet):
 
     def get_queryset(self):
         return (
-            District.objects.filter(region_id=self.kwargs["region_pk"])
+            District.objects.filter(region__slug=self.kwargs["region_slug"])
             .prefetch_related("wards")
             .select_related("region")
             .all()
         )
 
     def get_serializer_context(self):
-        return {"region_id": self.kwargs.get("region_pk")}
+        return {"region_slug": self.kwargs.get("region_slug")}
 
 
 class WardViewSet(ModelViewSet):
@@ -48,10 +50,10 @@ class WardViewSet(ModelViewSet):
     serializer_class = WardSerializer
 
     def get_queryset(self):
-        return Ward.objects.filter(district_id=self.kwargs["district_pk"]).all()
+        return Ward.objects.filter(district__slug=self.kwargs["district_slug"]).all()
 
     def get_serializer_context(self):
         return {
-            "region_id": self.kwargs.get("region_pk"),
-            "district_id": self.kwargs.get("district_pk"),
+            "region_slug": self.kwargs.get("region_slug"),
+            "district_slug": self.kwargs.get("district_slug"),
         }

@@ -1,6 +1,12 @@
 from pathlib import Path
+import socket
 from django.core.management.utils import get_random_secret_key
 from gqlauth.settings_type import GqlAuthSettings
+
+try:
+    HOSTNAME = socket.gethostbyname(socket.gethostname())
+except:
+    HOSTNAME = '127.0.1.1'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -126,14 +132,23 @@ INTERNAL_IPS = [
     "127.0.0.1",
 ]
 
-REST_FRAMEWORK = {
+if HOSTNAME in ["127.0.0.1", "localhost", "127.0.1.1"]:
+    REST_FRAMEWORK = {
+        "DEFAULT_RENDERER_CLASSES": [
+            "rest_framework.renderers.JSONRenderer",
+            "rest_framework.renderers.BrowsableAPIRenderer",
+        ],
+    }
+else:
+    REST_FRAMEWORK = {
     "DEFAULT_RENDERER_CLASSES": [
         "rest_framework.renderers.JSONRenderer",
     ],
 }
 
-
 GQL_AUTH = GqlAuthSettings(
     LOGIN_REQUIRE_CAPTCHA=False,
     REGISTER_REQUIRE_CAPTCHA=False,
 )
+
+APPEND_SLASH = False
